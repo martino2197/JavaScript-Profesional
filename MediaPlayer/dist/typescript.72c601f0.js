@@ -118,14 +118,52 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"ejercicios/typescript/index.ts":[function(require,module,exports) {
-console.log('Hello, TypeScript');
+// console.log('Hello, TypeScript');
+// function add(a: number, b: number) {
+//     return a + b
+// }
+// const sum = add(2, 3)
+// console.log(sum);
+//Boolean
+var muted = true;
+muted = false; // muted = "callado" ERROR
+//Números
 
-function add(a, b) {
-  return a + b;
-}
+var age = 6;
+var numerador = 42;
+var denominador = age;
+var resultado = numerador / denominador; //String
 
-var sum = add(2, 3);
-console.log(sum);
+var nombre = "Richard";
+var saludo = "Me llamo " + nombre; //Arreglos
+
+var people = [];
+people = ["Isabel", "Nicole", "Raul"]; // people.push(400)
+
+var peopleAndNumbers = [];
+peopleAndNumbers.push("Ricardo");
+peopleAndNumbers.push(9001); //Enum
+
+var Color;
+
+(function (Color) {
+  Color["Rojo"] = "Rojo";
+  Color["Verde"] = "Verde";
+  Color["Azul"] = "Azul";
+  Color["Amarillo"] = "Amarillo";
+})(Color || (Color = {}));
+
+var colorFavorito = Color.Azul;
+console.log("Mi color favorito es " + colorFavorito); //Any
+
+var comodin = "Joker";
+comodin = {
+  type: "Wildcard"
+}; //Object
+
+var someObject = {
+  type: 'Wildcard'
+};
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
