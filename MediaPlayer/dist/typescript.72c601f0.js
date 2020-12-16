@@ -164,6 +164,34 @@ comodin = {
 var someObject = {
   type: 'Wildcard'
 };
+/**Funciones */
+
+function add(a, b) {
+  return a + b;
+}
+
+var sum = add(4, 6);
+
+function createAdder(a) {
+  return function (b) {
+    return b + a;
+  };
+}
+
+var addFour = createAdder(4);
+var fourPlus6 = addFour(6);
+
+function fullName(firstName, lastName) {
+  if (firstName === void 0) {
+    firstName = "Martin";
+  }
+
+  return firstName + " " + lastName;
+}
+
+var richard = fullName("Richard");
+var martin = fullName();
+console.log(martin);
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
